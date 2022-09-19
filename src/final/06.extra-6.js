@@ -12,6 +12,9 @@ import {
 } from '../pokemon'
 
 function PokemonInfo({pokemonName}) {
+  // 第二次 reset 失效，因元件是同一個
+  // 所以 ErrorBoundary 加 key 值，確保每次reset都是獨立的
+  // but連PokemonInfo都會被reset
   const [state, setState] = React.useState({
     status: 'idle',
     pokemon: null,
