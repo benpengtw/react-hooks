@@ -1,6 +1,12 @@
 // useEffect: HTTP requests
 // 💯 create an ErrorBoundary component
 // http://localhost:3000/isolated/final/06.extra-4.js
+// You might notice that with the changes we've added, we now cannot recover from an error. For example:
+//       *Type an incorrect pokemon
+//       *Notice the error
+//       *Type a correct pokemon
+//       *Notice it doesn't show that new pokemon's information
+// 繼續看 extra-5
 
 import * as React from 'react'
 import {
