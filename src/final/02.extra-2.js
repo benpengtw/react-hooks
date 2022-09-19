@@ -12,6 +12,10 @@ function Greeting({initialName = ''}) {
   React.useEffect(() => {
     window.localStorage.setItem('name', name)
   }, [name])
+  //[name] 為dependency array，用來控制 useEffect 呼叫時機
+  // https://ithelp.ithome.com.tw/articles/10265945
+
+
 
   function handleChange(event) {
     setName(event.target.value)
